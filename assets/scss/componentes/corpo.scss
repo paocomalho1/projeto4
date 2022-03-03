@@ -32,3 +32,27 @@
     }
 
 }
+.attribution{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: white;
+    @include mini-celular{
+        font-size: 0.8rem;
+        color: black;
+    }
+    @include celular{
+        font-size: 0.8rem;
+        color: black;
+    }
+}
+.attribution a{
+    color: white;
+    @include celular{
+        color: black;
+}
+@include mini-celular{
+    color: black;
+}
+
+}

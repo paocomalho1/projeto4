@@ -72,6 +72,39 @@
   margin-bottom: 3rem;
 }
 
+.attribution {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: white;
+}
+@media only screen and (max-width: 550px) {
+  .attribution {
+    font-size: 0.8rem;
+    color: black;
+  }
+}
+@media only screen and (min-width: 550.01px) and (max-width: 767.98px) {
+  .attribution {
+    font-size: 0.8rem;
+    color: black;
+  }
+}
+
+.attribution a {
+  color: white;
+}
+@media only screen and (min-width: 550.01px) and (max-width: 767.98px) {
+  .attribution a {
+    color: black;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .attribution a {
+    color: black;
+  }
+}
+
 .splitter {
   background-color: white;
   border-radius: 30px;
