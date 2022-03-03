@@ -1,0 +1,170 @@
+@use "../utilitarios" as *;
+
+.splitter{
+
+    &__bill{
+        font-size: 1rem;
+        @include Space-mono-700;;
+        color: $ciano-cinza;
+        margin-bottom: 0.2rem;
+        margin-left: 2rem;
+    }
+    &__conteiner-input-1{
+        display: flex;
+        align-items: center;
+        margin-left: 1.4rem;
+        
+
+            &::before{
+                content: url(../images/icon-dollar.svg);
+                position: relative;
+                bottom:13px;
+                left: 2rem;
+                
+                
+            }
+    }
+    &__conteiner-input-2{
+        display: flex;
+        align-items: center;
+        margin-left: 1.3rem;
+                
+        
+            &::before{
+                content: url(../images/icon-person.svg);
+                position: relative;
+                left: 2rem;
+                        
+                        
+        }
+
+    }
+    &__input{
+        margin-bottom: 2rem;
+        height: 45.59px;
+        width: 373px;
+        border: none;
+        background-color: $ciano-cinza-claro2;
+        border-radius: 5px;
+        @include Space-mono-700;
+        font-size: 1.6rem;
+        text-align: right;
+        @include celular{
+            width: 100%;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    
+
+    }
+
+    &__tip{
+        @include Space-mono-700;
+        color: $ciano-cinza;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 2rem;
+
+    }
+    &__itens{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 2rem;
+        @include celular{
+            width: 100%;
+        }
+        
+
+    }
+    &__item{
+        margin-right: 1rem;
+        margin-bottom: 1.2rem;
+        @include celular{
+            &:nth-child(2){
+                margin-right: 0;
+            }
+            &:nth-child(4){
+                margin-right: 0;
+            }
+        }
+        
+
+    }
+    &__botao-p{
+        background-color: $ciano-escuro;
+        width: 115px;
+        @include Space-mono-700;
+        border: none;
+        color: $branco;
+        border-radius: 5px;
+        font-size: 1.6rem;
+        padding: 0.3rem 0rem;
+        text-align: center;
+        @include celular{
+            width: 150px;
+        }
+    
+        
+        &:hover{
+            background-color: $ciano-cinza-claro1;
+            color: $ciano-cinza;
+            cursor: pointer;
+            
+        }
+
+
+    }
+
+    &__botao-p-input{
+        height: 45.59px;
+        width: 112px;
+        border: none;
+        background-color: $ciano-cinza-claro2;
+        border-radius: 5px;
+        @include Space-mono-700;
+        font-size: 1.6rem;
+        text-align: right;
+        &::before{
+            content: url(../../images/);
+        }
+        &::placeholder {
+            text-align: center
+          }
+          &:hover{
+            cursor: pointer;
+        }
+        @include celular{
+            width: 147px;
+            margin-right: 0;
+        }
+         
+        
+    }
+    &__numberof{
+        @include Space-mono-700;
+        color: $ciano-cinza;
+        font-size: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 0.2rem;
+        margin-left: 2rem;
+        
+
+    }
+    &__input-2{
+        height: 45.59px;
+        width: 373px;
+        border: none;
+        background-color: $ciano-cinza-claro2;
+        border-radius: 5px;
+        @include Space-mono-700;
+        font-size: 1.6rem;
+        text-align: right;
+        @include celular{
+            width: 100%;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+}
+}

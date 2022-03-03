@@ -1,0 +1,98 @@
+@use "../utilitarios" as *;
+
+.splitter{
+    
+    background-color: $branco;
+    border-radius: 30px;
+    height: 350px;
+    width: 65%;
+    padding: 2rem;
+    padding-left: 0;
+    display: flex;
+    @include celular{
+        width: 91.5%;
+        flex-direction: column;
+        height: 700px;
+    }
+    
+    &__conteiner{
+        width: 50%;
+        height: 100%;
+        border-radius: 10px;
+        @include celular{
+            width: 100%;
+            flex-direction: column;
+            height: 450px;
+            align-items: center;
+            justify-content: center;
+        
+        }
+        &:first-child{
+            margin-right: 2rem;
+        }
+        &:last-child{
+            background-color: $ciano-escuro;
+            width: 50%;
+            @include celular{
+                margin-left: 2rem;
+                height: 250px;
+                width: 91%;
+            }
+        }
+    }
+    &__conteiner-1{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        align-items: center;
+        
+    }
+    &__conteiner-2{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    &__titulo{
+        @include Space-mono-700;
+        color: $branco;
+        font-size: 1rem;
+        margin-bottom: 0.5rem
+
+    }
+    &__person{
+        @include Space-mono-700;
+        font-size: 0.8rem;
+        color: $ciano-cinza;
+
+
+    }
+    &__numero{
+        color: $ciano;
+        font-size: 2rem;
+        @include Space-mono-700;
+        
+    }
+    &__botao{
+        margin-top: 8rem;
+        margin-left: 1.5rem;
+        width: 88%;
+        height: 50px;
+        background-color: $ciano;
+        color: $ciano-escuro;
+        @include Space-mono-700;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        @include celular{
+            margin-top: 2rem;
+            width: 85%;
+        }
+        &:hover{
+
+            background-color: $ciano-cinza-claro1;
+
+        }
+    }
+}

@@ -1,0 +1,27 @@
+//cores
+
+$ciano: hsl(172, 67%, 45%);
+$ciano-escuro:hsl(183, 100%, 15%);
+$ciano-cinza: hsl(186, 14%, 43%);
+$ciano-cinza2: hsl(184, 14%, 56%);
+$ciano-cinza-claro1: hsl(185, 41%, 84%);
+$ciano-cinza-claro2: hsl(189, 41%, 97%);
+$branco: hsl(0, 0%, 100%);
+
+
+//font
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+@mixin Space-mono-400 {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    
+}
+
+@mixin Space-mono-700 {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    
+}

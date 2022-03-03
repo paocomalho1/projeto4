@@ -1,0 +1,24 @@
+@use "componentes";
+@use "utilitarios" as *;
+
+body{
+    font-size: 24px;
+}
+input:focus{
+    box-shadow: 0px 0px 0px 2px $ciano;
+    outline: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+.error{
+    box-shadow: 0px 0px 0px 2px red;
+    outline: 0;
+}
