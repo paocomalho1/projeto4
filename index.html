@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Tip calculator app</title>
 
@@ -18,32 +17,38 @@
     </div>
     <div class="splitter">
       <div class="splitter__conteiner">
+        <div class="splitter__conteiner-text">
         <h3 class="splitter__bill">Bill</h3>
+        <span class="splitter__input-mensagem"></span>
+        </div>
         <div class="splitter__conteiner-input-1">
           <input class="splitter__input" type="number">
         </div>
         <h3 class="splitter__tip">Select Tip %</h3>
         <ul class="splitter__itens">
           <li class="splitter__item">
-            <button class="splitter__botao-p">5%</button>
+            <button class="splitter__botao-p" onclick="tip(5)">5%</button>
           </li>
           <li class="splitter__item">
-            <button class="splitter__botao-p">10%</button>
+            <button class="splitter__botao-p" onclick="tip(10)">10%</button>
           </li>
           <li class="splitter__item">
-            <button class="splitter__botao-p">15%</button>
+            <button class="splitter__botao-p" onclick="tip(15)">15%</button>
           </li>
           <li class="splitter__item">
-            <button class="splitter__botao-p">25%</button>
+            <button class="splitter__botao-p" onclick="tip(25)">25%</button>
           </li>
           <li class="splitter__item">
-            <button class="splitter__botao-p">50%</button>
+            <button class="splitter__botao-p" onclick="tip(50)">50%</button>
           </li>
           <li class="splitter__item">
-            <input type="number" class="splitter__botao-p-input" placeholder="Custom">
+            <input type="number" class="splitter__botao-p-input" onchange="tipInput()"placeholder="Custom">
           </li>
         </ul>
+        <div class="splitter__conteiner-text">
         <h3 class="splitter__numberof">Number of People</h3>
+        <span class="splitter__input-mensagem-2"></span>
+        </div>
         <div class="splitter__conteiner-input-2">
         <input type="number" class="splitter__input-2">
         </div>
@@ -54,19 +59,22 @@
               <h3 class="splitter__titulo">Tip Amount</h3>
               <p class="splitter__person">/ person</p>
             </div>
-            <h3 class="splitter__numero">$10.00</h3>
+            <h3 class="splitter__numero">$0.00</h3>
           </div>
           <div class="splitter__conteiner-1">
             <div class="splitter__conteiner-2">
                 <h3 class="splitter__titulo">Total</h3>
                 <p class="splitter__person">/ person</p>
               </div>
-              <h3 class="splitter__numero">$10,00</h3>
+              <h3 class="splitter__numero">$0,00</h3>
             </div>
-            <button class="splitter__botao">RESET</button>
+            <div class="splitter__conteiner-botao">
+              <button class="splitter__botao" onclick="reset()">RESET</button>
+            </div>
       </div>
     </div>
   </main>
+  <script src="./assets/js/index.js"></script>
 </body>
 </html>
 

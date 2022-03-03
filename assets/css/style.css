@@ -40,12 +40,26 @@
   align-items: center;
   flex-direction: column;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 550px) {
   .conteudo {
     display: block;
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (min-width: 550.01px) and (max-width: 767.98px) {
+  .conteudo {
+    display: block;
+  }
+}
+@media only screen and (min-width: 550.01px) and (max-width: 767.98px) {
+  .conteudo__titulo-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    padding-top: 2rem;
+  }
+}
+@media only screen and (max-width: 550px) {
   .conteudo__titulo-conteiner {
     display: flex;
     justify-content: center;
@@ -67,9 +81,16 @@
   padding-left: 0;
   display: flex;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 550px) {
   .splitter {
     width: 91.5%;
+    flex-direction: column;
+    height: 700px;
+  }
+}
+@media only screen and (min-width: 550.01px) and (max-width: 767.98px) {
+  .splitter {
+    width: 95.5%;
     flex-direction: column;
     height: 700px;
   }
@@ -79,7 +100,16 @@
   height: 100%;
   border-radius: 10px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 550px) {
+  .splitter__conteiner {
+    width: 100%;
+    flex-direction: column;
+    height: 450px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 550.01px) and (max-width: 767.98px) {
   .splitter__conteiner {
     width: 100%;
     flex-direction: column;
@@ -95,7 +125,14 @@
   background-color: #00494d;
   width: 50%;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 550px) {
+  .splitter__conteiner:last-child {
+    margin-left: 2rem;
+    height: 250px;
+    width: 91%;
+  }
+}
+@media only screen and (min-width: 550.01px) and (max-width: 767.98px) {
   .splitter__conteiner:last-child {
     margin-left: 2rem;
     height: 250px;
@@ -133,10 +170,16 @@
   font-family: "Space Mono", monospace;
   font-weight: 700;
 }
+.splitter__conteiner-botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .splitter__botao {
   margin-top: 8rem;
   margin-left: 1.5rem;
-  width: 88%;
+  width: 100%;
+  margin-right: 1.5rem;
   height: 50px;
   background-color: #26c0ab;
   color: #00494d;
@@ -146,7 +189,13 @@
   border: none;
   border-radius: 5px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 550px) {
+  .splitter__botao {
+    margin-top: 2rem;
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 550.01px) and (max-width: 767.98px) {
   .splitter__botao {
     margin-top: 2rem;
     width: 85%;
@@ -161,8 +210,13 @@
   font-family: "Space Mono", monospace;
   font-weight: 700;
   color: #5e7a7d;
-  margin-bottom: 0.2rem;
   margin-left: 2rem;
+}
+.splitter__conteiner-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
 }
 .splitter__conteiner-input-1 {
   display: flex;
@@ -174,6 +228,22 @@
   position: relative;
   bottom: 13px;
   left: 2rem;
+}
+.splitter__input-mensagem {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: red;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.splitter__input-mensagem:last-child {
+  margin-bottom: 0rem;
+}
+.splitter__input-mensagem-2 {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: red;
+  font-size: 1rem;
 }
 .splitter__conteiner-input-2 {
   display: flex;
@@ -188,7 +258,7 @@
 .splitter__input {
   margin-bottom: 2rem;
   height: 45.59px;
-  width: 373px;
+  width: 100%;
   border: none;
   background-color: #f4fafa;
   border-radius: 5px;
@@ -196,11 +266,6 @@
   font-weight: 700;
   font-size: 1.6rem;
   text-align: right;
-}
-@media only screen and (max-width: 767.98px) {
-  .splitter__input {
-    width: 100%;
-  }
 }
 .splitter__input:hover {
   cursor: pointer;
@@ -217,17 +282,27 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: 2rem;
-}
-@media only screen and (max-width: 767.98px) {
-  .splitter__itens {
-    width: 100%;
-  }
+  width: 96%;
 }
 .splitter__item {
-  margin-right: 1rem;
   margin-bottom: 1.2rem;
+  width: 33.3%;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 550px) {
+  .splitter__item {
+    width: 50%;
+  }
+  .splitter__item:nth-child(2) {
+    margin-right: 0;
+  }
+  .splitter__item:nth-child(4) {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 550.01px) and (max-width: 767.98px) {
+  .splitter__item {
+    width: 50%;
+  }
   .splitter__item:nth-child(2) {
     margin-right: 0;
   }
@@ -237,7 +312,7 @@
 }
 .splitter__botao-p {
   background-color: #00494d;
-  width: 115px;
+  width: calc(100% - 1rem);
   font-family: "Space Mono", monospace;
   font-weight: 700;
   border: none;
@@ -247,9 +322,9 @@
   padding: 0.3rem 0rem;
   text-align: center;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (min-width: 550.01px) and (max-width: 767.98px) {
   .splitter__botao-p {
-    width: 150px;
+    width: calc(100% - 1rem);
   }
 }
 .splitter__botao-p:hover {
@@ -259,7 +334,7 @@
 }
 .splitter__botao-p-input {
   height: 45.59px;
-  width: 112px;
+  width: calc(100% - 1.125rem);
   border: none;
   background-color: #f4fafa;
   border-radius: 5px;
@@ -274,14 +349,13 @@
 .splitter__botao-p-input::placeholder {
   text-align: center;
 }
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .splitter__botao-p-input::placeholder {
+    font-size: 1rem;
+  }
+}
 .splitter__botao-p-input:hover {
   cursor: pointer;
-}
-@media only screen and (max-width: 767.98px) {
-  .splitter__botao-p-input {
-    width: 147px;
-    margin-right: 0;
-  }
 }
 .splitter__numberof {
   font-family: "Space Mono", monospace;
@@ -289,12 +363,11 @@
   color: #5e7a7d;
   font-size: 1rem;
   margin-top: 1rem;
-  margin-bottom: 0.2rem;
   margin-left: 2rem;
 }
 .splitter__input-2 {
   height: 45.59px;
-  width: 373px;
+  width: 100%;
   border: none;
   background-color: #f4fafa;
   border-radius: 5px;
@@ -303,13 +376,13 @@
   font-size: 1.6rem;
   text-align: right;
 }
-@media only screen and (max-width: 767.98px) {
-  .splitter__input-2 {
-    width: 100%;
-  }
-}
 .splitter__input-2:hover {
   cursor: pointer;
+}
+
+.error {
+  box-shadow: 0px 0px 0px 2px red;
+  outline: 0;
 }
 
 body {

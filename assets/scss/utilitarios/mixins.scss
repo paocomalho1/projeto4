@@ -1,5 +1,11 @@
+@mixin mini-celular{
+    @media only screen and (max-width: 550.0px){ @content;}
+}
 @mixin celular {
-    @media only screen and (max-width: 767.98px){ @content;}
+    @media only screen and (min-width: 550.01px) and (max-width: 767.98px){ @content;}
+}
+@mixin tablet {
+    @media only screen and (min-width: 768.00px) and (max-width: 1100.00px){ @content;}
 }
 @mixin flex-jc {
     display: flex;

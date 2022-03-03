@@ -9,16 +9,29 @@
     padding: 2rem;
     padding-left: 0;
     display: flex;
-    @include celular{
+    @include mini-celular{
         width: 91.5%;
         flex-direction: column;
         height: 700px;
     }
+    @include celular{
+        width: 95.5%;
+        flex-direction: column;
+        height: 700px;
+    }
+    
     
     &__conteiner{
         width: 50%;
         height: 100%;
         border-radius: 10px;
+        @include mini-celular{
+            width: 100%;
+            flex-direction: column;
+            height: 450px;
+            align-items: center;
+            justify-content: center;
+        }
         @include celular{
             width: 100%;
             flex-direction: column;
@@ -33,6 +46,11 @@
         &:last-child{
             background-color: $ciano-escuro;
             width: 50%;
+            @include mini-celular{
+                margin-left: 2rem;
+                height: 250px;
+                width: 91%;
+            }
             @include celular{
                 margin-left: 2rem;
                 height: 250px;
@@ -74,10 +92,16 @@
         @include Space-mono-700;
         
     }
+    &__conteiner-botao{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     &__botao{
         margin-top: 8rem;
         margin-left: 1.5rem;
-        width: 88%;
+        width: 100%;
+        margin-right: 1.5rem;
         height: 50px;
         background-color: $ciano;
         color: $ciano-escuro;
@@ -85,6 +109,10 @@
         font-size: 20px;
         border: none;
         border-radius: 5px;
+        @include mini-celular{
+            margin-top: 2rem;
+            width: 85%;
+        }
         @include celular{
             margin-top: 2rem;
             width: 85%;

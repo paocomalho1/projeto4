@@ -6,8 +6,13 @@
         font-size: 1rem;
         @include Space-mono-700;;
         color: $ciano-cinza;
-        margin-bottom: 0.2rem;
         margin-left: 2rem;
+    }
+    &__conteiner-text{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 0.5rem;
     }
     &__conteiner-input-1{
         display: flex;
@@ -23,6 +28,21 @@
                 
                 
             }
+    }
+    &__input-mensagem{
+        @include Space-mono-700;
+        color: red;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        &:last-child{
+            margin-bottom: 0rem;
+
+        }
+    }
+    &__input-mensagem-2{
+        @include Space-mono-700;
+        color: red;
+        font-size: 1rem;
     }
     &__conteiner-input-2{
         display: flex;
@@ -42,16 +62,13 @@
     &__input{
         margin-bottom: 2rem;
         height: 45.59px;
-        width: 373px;
+        width: 100%;
         border: none;
         background-color: $ciano-cinza-claro2;
         border-radius: 5px;
         @include Space-mono-700;
         font-size: 1.6rem;
         text-align: right;
-        @include celular{
-            width: 100%;
-        }
         &:hover{
             cursor: pointer;
         }
@@ -71,16 +88,23 @@
         display: flex;
         flex-wrap: wrap;
         margin-left: 2rem;
-        @include celular{
-            width: 100%;
-        }
-        
+        width: 96%;
 
     }
     &__item{
-        margin-right: 1rem;
         margin-bottom: 1.2rem;
+        width: 33.3%;
+        @include mini-celular{
+            width: 50.0%;
+            &:nth-child(2){
+                margin-right: 0;
+            }
+            &:nth-child(4){
+                margin-right: 0;
+            }
+        }
         @include celular{
+            width: 50.0%;
             &:nth-child(2){
                 margin-right: 0;
             }
@@ -93,7 +117,7 @@
     }
     &__botao-p{
         background-color: $ciano-escuro;
-        width: 115px;
+        width: calc(100% - 1rem);
         @include Space-mono-700;
         border: none;
         color: $branco;
@@ -102,7 +126,7 @@
         padding: 0.3rem 0rem;
         text-align: center;
         @include celular{
-            width: 150px;
+            width: calc(100% - 1rem);
         }
     
         
@@ -118,7 +142,7 @@
 
     &__botao-p-input{
         height: 45.59px;
-        width: 112px;
+        width: calc(100% - pxToRem(18));
         border: none;
         background-color: $ciano-cinza-claro2;
         border-radius: 5px;
@@ -129,14 +153,13 @@
             content: url(../../images/);
         }
         &::placeholder {
-            text-align: center
+            text-align: center;
+            @include tablet{
+                font-size: 1.0rem;
+            }
           }
           &:hover{
             cursor: pointer;
-        }
-        @include celular{
-            width: 147px;
-            margin-right: 0;
         }
          
         
@@ -146,25 +169,26 @@
         color: $ciano-cinza;
         font-size: 1rem;
         margin-top: 1rem;
-        margin-bottom: 0.2rem;
         margin-left: 2rem;
         
 
     }
     &__input-2{
         height: 45.59px;
-        width: 373px;
+        width: 100%;
         border: none;
         background-color: $ciano-cinza-claro2;
         border-radius: 5px;
         @include Space-mono-700;
         font-size: 1.6rem;
         text-align: right;
-        @include celular{
-            width: 100%;
-        }
         &:hover{
             cursor: pointer;
         }
 }
+}
+.error{
+    box-shadow: 0px 0px 0px 2px red;
+    outline: 0;
+    
 }

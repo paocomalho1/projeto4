@@ -5,6 +5,9 @@
     height: 100vh;
     @include flex-cc;
     flex-direction: column;
+    @include mini-celular{
+        display: block;
+    }
     @include celular{
         display: block;
     }
@@ -16,6 +19,13 @@
         height: 150px;
         padding-top: 2rem;
         }
+        @include mini-celular{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            padding-top: 2rem;
+            }
     }
     &__titulo{
         margin-bottom: 3rem;
