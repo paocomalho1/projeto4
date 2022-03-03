@@ -42,7 +42,28 @@ function tipInput(){
     const people = document.querySelector(".splitter__input-2")
     const tip = document.querySelectorAll(".splitter__numero")
     const tipInput = document.querySelector(".splitter__botao-p-input")
+    const mensagem = document.querySelector(".splitter__input-mensagem")
+    const mensagem2 = document.querySelector(".splitter__input-mensagem-2")
     const valor = bill.value
+
+    if(valor == 0){
+        bill.classList.add("error")
+        mensagem.innerHTML = "Can't be zero"
+        return
+    }
+    else{
+        bill.classList.remove("error")
+        mensagem.innerHTML = ""
+    }
+    if(valorPeople == 0){
+        people.classList.add("error")
+        mensagem2.innerHTML = "Can't be zero"
+        return
+    }
+    else{
+        people.classList.remove("error")
+        mensagem2.innerHTML = ""
+    }
     const valorPeople = people.value
     const porcentagem = 100/tipInput.value
     let valorTip = valor/porcentagem
