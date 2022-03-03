@@ -38,6 +38,7 @@ function tip(valorBotao){
 
 }
 function tipInput(){
+    console.log("lol")
     const bill = document.querySelector(".splitter__input")
     const people = document.querySelector(".splitter__input-2")
     const tip = document.querySelectorAll(".splitter__numero")
@@ -45,6 +46,7 @@ function tipInput(){
     const mensagem = document.querySelector(".splitter__input-mensagem")
     const mensagem2 = document.querySelector(".splitter__input-mensagem-2")
     const valor = bill.value
+    const valorPeople = people.value
 
     if(valor == 0){
         bill.classList.add("error")
@@ -64,7 +66,6 @@ function tipInput(){
         people.classList.remove("error")
         mensagem2.innerHTML = ""
     }
-    const valorPeople = people.value
     const porcentagem = 100/tipInput.value
     let valorTip = valor/porcentagem
     let valorTotal = (parseFloat(valorTip)+parseFloat(valor)) / valorPeople
