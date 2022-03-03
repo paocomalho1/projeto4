@@ -33,8 +33,11 @@ function tip(valorBotao){
 
     let valorTip = valor/porcentagem
     let valorTotal = (parseFloat(valorTip)+parseFloat(valor)) / valorPeople
-    tip[0].innerHTML = `$${valorTip / valorPeople}`
-    tip[1].innerHTML = `$${valorTotal}`
+    let tipTotal = valorTip / valorPeople
+    const tipAredondado = tipTotal.toFixed(2)
+    const valorAredondado = valorTotal.toFixed(2)
+    tip[0].innerHTML = `$${tipAredondado}`
+    tip[1].innerHTML = `$${valorAredondado}`
 
 }
 function tipInput(){
@@ -69,8 +72,11 @@ function tipInput(){
     const porcentagem = 100/tipInput.value
     let valorTip = valor/porcentagem
     let valorTotal = (parseFloat(valorTip)+parseFloat(valor)) / valorPeople
-    tip[0].innerHTML = `$${valorTip / valorPeople}`
-    tip[1].innerHTML = `$${valorTotal}`
+    let tipTotal = valorTip / valorPeople
+    const tipAredondado = tipTotal.toFixed(2)
+    const valorAredondado = valorTotal.toFixed(2)
+    tip[0].innerHTML = `$${tipAredondado}`
+    tip[1].innerHTML = `$${valorAredondado}`
 
 }
 function reset(){
